@@ -185,7 +185,7 @@
 
         /* Nome da namorada */
         .girlfriend-name::before {
-            content: var(Marina);
+            content: var(--Marina-);
         }
 
         /* Card principal dark theme melhorado */
@@ -727,7 +727,7 @@
         </header>
 
         <main class="love-card">
-            <h2>Minha Alma Gêmea 💕</h2>
+            <h2> Marina 💕</h2>
             <div class="love-message">
                 <p><span class="girlfriend-name"></span>, você é a razão do meu despertar feliz e o último pensamento antes de dormir. Desde que você chegou na minha vida, cada dia se tornou mais colorido, mais doce, mais completo.</p>
                 <br>
@@ -1067,42 +1067,6 @@
             });
         });
 
-        // Sistema de notificações românticas dark
-        const romanticMessages = [
-            "💖 Você é meu mundo inteiro!",
-            "🌹 Cada dia com você é especial!",
-            "💎 Você é meu tesouro mais precioso!",
-            "✨ Meu coração bate só por você!",
-            "🥰 Te amo mais a cada segundo!",
-            "💕 Você é minha felicidade!",
-            "🌟 Minha estrela mais brilhante!",
-            "💘 Amor da minha vida toda!"
-        ];
-
-        function showNotification() {
-            const notification = document.createElement('div');
-            const message = romanticMessages[Math.floor(Math.random() * romanticMessages.length)];
-            
-            notification.innerHTML = message;
-            notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: linear-gradient(45deg, #ff0040, #990026);
-                color: white;
-                padding: 15px 25px;
-                border-radius: 25px;
-                font-weight: 600;
-                z-index: 9999;
-                box-shadow: 0 10px 30px rgba(255, 0, 64, 0.4);
-                animation: notification-slide 4s ease-in-out forwards;
-                backdrop-filter: blur(10px);
-                border: 1px solid rgba(255, 0, 64, 0.3);
-            `;
-            
-            document.body.appendChild(notification);
-            setTimeout(() => notification.remove(), 4000);
-        }
 
         // Mostrar notificações aleatórias
         setInterval(showNotification, 18000);
